@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border-radius: 50%;
+        }
+
+        .wrapper{
+            width: 500px;
+            height: 500px;
+            position: relative;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>标题</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border-radius: 50%;
+        }
+
+        .wrapper{
+            width: 500px;
+            height: 500px;
+            position: relative;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <span>R:</span><input type="text" id="R" value=""><br>
+        <span>G:</span><input type="text" id="G" value=""><br>
+        <span>B:</span><input type="text" id="B" value=""><br>
+        <button onclick="boxColor(r,g,b)">点击生成</button>
+        <span><button onclick="origin()">还原</button></span>
+        <span><button onclick="clearData(r,g,b)">清除数据</button></span>
+        <br>
+        <br>
+        <div class="box"></div>
+    </div>
+
+    <script>
+        // 生成简单的事件
+        // 当输入值得时候可以变换盒子的颜色
+        // 这也许是简单的颜色生成器
+
+        let box = document.getElementsByClassName("box")[0];
+        let r, g, b;
+        r = document.getElementById("R");
+        g = document.getElementById("G");
+        b = document.getElementById("B");
+
+        let boxColor = (r, g, b) => {
+            box.style.backgroundColor = "#" + r.value + g.value + b.value;
+        }
+
+        let origin = () => {
+            box.style.backgroundColor = "pink";
+        }
+
+        let clearData = () => {
+            r.value = "";
+            g.value = "";
+            b.value = "";
+        }
+
+    </script>
+
+</body>
+
+</html>

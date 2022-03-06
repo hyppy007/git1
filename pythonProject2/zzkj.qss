@@ -1,0 +1,10 @@
+  516      if event.button()==QtCore.Qt.LeftButton:
+            self.m_flag=True
+            self.m_Position=event.globalPos()-self.pos()
+            event.accept()
+            self.setCursor(QtGui.QCursor(QtCore.Qt.OpenHandCursor))
+         572   self.mflag=False
+        self.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self._corner_drag = False
+        self._bottom_drag = False
+        self._right_drag = False
